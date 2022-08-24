@@ -1,0 +1,91 @@
+$main-color: #b61984;
+$text-color1: #181818;
+$text-color2: #191919;
+$text-fs-sm: 13px;
+$text-fs-md: 15px;
+$text-fs-x: 25px;
+$text-fw1: 300;
+$text-fw2: 500;
+$text-fw3: 600;
+$mt1:30px;
+$bg-main:#b61984;
+@mixin button($fs,$fw,$c,$pd,) {
+    
+}
+   * {
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-family: "Work Sans", sans-serif}
+  .container{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  header {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+      .header-logo {
+        img {
+            width: 100%;
+        }
+      }
+      nav {
+        margin-top: $mt1;
+        padding-left: 125px;
+        a{
+            color: $text-color1;
+            font-size: $text-fs-md;
+            text-decoration: none;
+            margin-left: 45px;
+            font-weight: $text-fw3;
+            &:hover{
+                color: $main-color;
+
+            }
+        }
+      }
+      .header-content {
+        padding:0  20px ;
+        margin-top: 20px;
+        button{
+            color: #fff;
+            background-color: $bg-main;
+            padding: 10px 20px;
+            border-radius: 30px;
+            &:hover{
+                webkit-box-shadow: 0 0 0 1px #b61984 inset;
+                color: $main-color;
+            }
+
+            i{ color: #fff;
+
+            };
+
+        };
+        i{
+          color:$text-color1;
+          font-size: $text-fs-sm;  
+          margin-left: 10px;
+          &:hover{
+            color: $main-color;
+          }
+        }
+      }
+    }
+  }
+  .carousel{
+    .container{  display: flex;
+        .left{
+            span{};
+            h1{};
+        }
+        .right{
+            img{
+    
+            }
+        }}
+  
+  }
+
