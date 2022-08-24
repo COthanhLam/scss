@@ -12,7 +12,15 @@ $bg-main:#b61984;
 @mixin button($fs,$fw,$c,$pd,) {
     
 }
+@mixin text($fz,$fw,$c) {
+    font-size: $fz;
+    font-weight: $fw;
+    color: $c;
+    
+}
    * {
+    margin: 0;
+    padding: 0;
   font-family: "Montserrat", sans-serif;
   font-family: "Roboto", sans-serif;
   font-family: "Work Sans", sans-serif}
@@ -21,6 +29,11 @@ $bg-main:#b61984;
     margin: 0 auto;
   }
   header {
+    position:absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
     .container {
         max-width: 1200px;
         margin: 0 auto;
@@ -78,14 +91,92 @@ $bg-main:#b61984;
   .carousel{
     .container{  display: flex;
         .left{
-            span{};
-            h1{};
+            background-image: url(../images/yellow_top_wave_01.png);
+            background-position: top left;
+            background-repeat: no-repeat;
+            background-size: 200%;
+            div{
+                margin-top: 50%;
+                padding-left: 20px;
+
+                span{
+                    color: $bg-main;
+                    font-size: $text-fs-md;
+                    font-weight: $text-fw2;
+                    margin-top: 20px
+                };
+                h1{
+                    font-weight: $text-fw3;
+                    font-size: 60px;
+                };
+            }
+           
         }
         .right{
+            margin-top: 10%;
             img{
+              
     
             }
         }}
   
+  }
+  .features{
+    .container{
+        // background: url(../images/Violet_top_left_wave.png);
+        // background-repeat: no-repeat;
+        // background-position:center center ;
+        // background-size: cover;
+        .features-top{
+            display: flex;
+            .left{
+  img{
+
+  }
+            };
+            .right{
+                div{
+                    margin-top: 25%;
+                    span{
+                        color: $bg-main;
+                        font-weight: $text-fw2;
+                        font-size: $text-fs-md;
+                    };
+                    h1 {
+                     @include text(50px,$text-fw3 ,$text-color1 )
+                    };
+                    p{
+                        @include text($text-fs-sm,$text-fw1 ,$text-color1 )
+                    }
+                }
+
+            }
+        }
+        .features-bottom{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 30px;
+            .item{
+                display: flex;
+                .icon{
+                    i{
+                        @include text(30px,0 ,$text-color2)
+
+                    }
+                };
+                .content{
+                    span{
+                        @include text($text-fs-md,$text-fw2 ,$bg-main )
+
+                    };
+                    p{
+                        @include text($text-fs-sm,0 ,$text-color2)
+                    };
+
+                }
+          
+            }
+        }
+    }
   }
 
